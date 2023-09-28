@@ -18,7 +18,4 @@
 
 ## Ataques
 
-- item1
-- item2
-- item3
-- item4
+- Não há registo de ataques bem sucedidos, no entanto, se esta vulnerabilidade for amplamente explorada, poderia permitir que os invasores conduzisse ataques man-in-the-middle e acedesse a informações confidenciais sobre as conexões do usuário com o software afetado.
