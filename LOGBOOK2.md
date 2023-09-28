@@ -12,10 +12,9 @@
 
 ## Exploit
 
-- item1
-- item2
-- item3
-- item4
+- Existe uma “spoofing vulnerability” na maneira como o Windows CryptoAPI valida certificados de criptografia de curva elíptica (ECC).
+- Um invasor poderia explorar a vulnerabilidade usando um certificado de assinatura de código falsificado para assinar um executável malicioso, fazendo parecer que o arquivo era de uma fonte legítima e confiável.
+- O usuário não teria como saber que o arquivo era malicioso, porque a assinatura digital pareceria ser de um provedor confiável.
 
 ## Ataques
 
