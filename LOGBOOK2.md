@@ -7,10 +7,8 @@
 
 ## Catalogação
 
-- item1
-- item2
-- item3
-- item4
+- A vulnerabilidade foi relatada pela Microsoft por pesquisadores de segurança e foi divulgada em janeiro de 2020.
+- Devido ao seu potencial impacto na segurança esta vulnerabilidade foi classificada como crítica.
 
 ## Exploit
 
