@@ -13,4 +13,6 @@ Depois, a partir do terminal executamos o comando: python3 CVE-2021-34646.py htt
 Obvtivemos esta resposta:
 
 O primeiro link irá permitir-nos autenticar no servidor como administradores.
-Posteriormente, acedemos ao link http://ctf-fsi.fe.up.pt:5001/wp-admin/edit.php onde tivemos acesso a uma mensagem privada que nos permitiu chegar à resposta do desafio.
+Posteriormente, acedemos ao link http://ctf-fsi.fe.up.pt:5001/wp-admin/edit.php onde tivemos acesso a uma mensagem privada:
+
+que nos permitiu chegar à resposta do desafio.
