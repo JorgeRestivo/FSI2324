@@ -58,7 +58,7 @@ As variáveis de ambiente do novo programa são determinadas pelo ambiente do pr
 
 
 
-### 2.4: Environment Variables and system()
+### 2.4 Environment Variables and system()
 Após criarmos um ficheiro chamado "file4" que contém o código do enunciado,
 <img src="imagens/Captura de ecrã 2023-10-13, às 16.59.33.png">
 conseguimos ver que quando o executamos, vai imprimir todas as variáveis de ambiente.
@@ -71,7 +71,7 @@ Isto levou-nos a concluir que a função "system" é uma função que permite ao
 
 
 
-### 2.5: Environment Variable and Set-UID Programs
+### 2.5 Environment Variable and Set-UID Programs
 Após criar o ficheiro "task5.c" com o código indicado, tornei-o num programa Set-UID através dos comandos:
 - sudo chown root task5
 - sudo chmod 4755 task5
@@ -88,3 +88,6 @@ estas são apenas definidas no terminal do utilizador uma vez que, quando execut
 
 Variáveis de ambiente como LD_LIBRARY_PATH podem ser usadas para manipular o comportamento de bibliotecas dinâmicas. Num contexto Set-UID, isso pode ser uma séria vulnerabilidade de segurança se permitido. Portanto, ao definir variáveis de ambiente em programas Set-UID, o sistema frequentemente limpa ou redefine variáveis como LD_LIBRARY_PATH para evitar que um usuário mal-intencionado substitua bibliotecas do sistema por outras versões.
 
+
+
+### 2.6 The PATH Environment Variable and Set-UID Programs
