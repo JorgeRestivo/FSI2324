@@ -11,13 +11,13 @@ sendo assim flag{CVE-2021-34646} a resposta a este desafio.
 Para este desafio começamos por descarregar o ficheiro do exploit associado ao CVE 2021-34646 e chamamos-lhe "CVE-2021-34646.py".
 A partir do terminal executamos o comando "python3 CVE-2021-34646.py https://ctf-fsi.fe.up.pt:5001 1", utilizamos o URL do site WordPress pois é este em questão que queremos "atacar" e também o argumento 1 pois é o ID do usuário que queremos aceder (normalmente o ID 1 costuma ser o do administrador).
 Obvtivemos esta resposta:
-<img src = "/Users/leticiacoelho/Desktop/FSI/l02g08/links_para_aceder.png"> 
+<img src = "imagens/links_para_aceder.png"> 
 O primeiro link permitiu-nos autenticar no servidor como administradores.
-<img src = "/Users/leticiacoelho/Desktop/FSI/l02g08/sucesso_login.png">
+<img src = "imagens/sucesso_login.png">
 
 Posteriormente, acedemos ao link http://ctf-fsi.fe.up.pt:5001/wp-admin/edit.php:
-<img src = "/Users/leticiacoelho/Desktop/FSI/l02g08/mensagem.png">
+<img src = "imagens/mensagem.png">
 
 onde tivemos acesso a uma mensagem privada:
-<img src = "/Users/leticiacoelho/Desktop/FSI/l02g08/mensagem2.png">
+<img src = "imagens/mensagem2.png">
 que nos permitiu chegar à resposta do desafio.
