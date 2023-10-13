@@ -3,7 +3,9 @@ Após acedermos o endereço http://ctf-fsi.fe.up.pt:5001 encontramos um servidor
 
 ![Texto Alternativo](informações-wordpress.png)
 
-Para posteriormente encontrarmos a vulnerabilidade associada a este software, utilizamos uma plataforma de base de dados com informações sobre todas as CVE: https://www.exploit-db.com.
+<img src = "informações-wordpress.png">
+
+Para depois encontrarmos a vulnerabilidade associada a este software, utilizamos uma plataforma de base de dados com informações sobre todas as CVE: https://www.exploit-db.com.
 Assim, encontramos o CVE 2021-34646, sendo assim flag{CVE-2021-34646} a resposta a este desafio.
 
 ## Desafio 2
