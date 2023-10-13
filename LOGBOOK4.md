@@ -27,6 +27,7 @@ voltamos a compilar este ficheiro e novamente a imprimir o resultado do ficheiro
 
 Por fim, corremos o comando "diff file1 file2" com o objetivo de perceber se existiam diferenças entre os dois ficheiros. Não existem.
 
+
 #### Observações:
 No file1, vemos apenas as variáveis de ambiente impressas pelo processo filho, enquanto no file2 vemos apenas as variáveis de ambiente impressas pelo processo pai.
 Quando comparados estes dois ficheiros, tanto o processo filho quanto o processo pai estão a aceder às mesmas variáveis de ambiente. Ambos os processos, quando chamam o printenv(), vão aceder e imprimir o mesmo conjunto de variáveis de ambiente porque o processo filho herda as variáveis de ambiente do seu processo pai.
@@ -47,3 +48,6 @@ Desta vez, ao executarmos o comando "diff file3 file4":
 <img src ="imagens/Captura de ecrã 2023-10-13, às 16.39.54.png">
 
 Isto acontece pois o "file3" não tem nenhum conteúdo enquanto que o "file4" tem todas as variáveis de ambiente do "environ" array.
+
+#### Observações
+As variáveis de ambiente do novo programa são determinadas pelo ambiente do processo de chamada. Ao passar NULL como argumento, ele herda um conjunto nulo de variáveis, enquanto que ao passar "environ" permite herdar o conjunto completo de variáveis de ambiente do processo atual.
