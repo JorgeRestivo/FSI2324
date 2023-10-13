@@ -12,6 +12,7 @@ Caso queiramos imprimir o ambiente completo, esta já vai estar presente:
 Através do comando "unset" podemos eliminar esta variável. Se voltarmos a imprimir o ambiente, então esta variável já não aparece.
 <img src="imagens/Captura de ecrã 2023-10-13, às 14.17.22.png">
 
+
 ### 2.2 Task 2: Passing Environment Variables from Parent Process to Child Process
 Começamos por compilar o ficheiro "myprintenv.c" e posteriormente correr e imprimir o resultado do ficheiro executável de "myprintenv.c", "a.out", num ficheiro chamado "file1".
 <img src="imagens/Captura de ecrã 2023-10-13, às 15.49.39.png">
@@ -33,6 +34,7 @@ No file1, vemos apenas as variáveis de ambiente impressas pelo processo filho, 
 Quando comparados estes dois ficheiros, tanto o processo filho quanto o processo pai estão a aceder às mesmas variáveis de ambiente. Ambos os processos, quando chamam o printenv(), vão aceder e imprimir o mesmo conjunto de variáveis de ambiente porque o processo filho herda as variáveis de ambiente do seu processo pai.
 Isto significa que qualquer variável de ambiente definida no processo pai é acessível ao processo filho sem a necessidade de passagem explícita. Quando o processo filho acede à variável environ, ele vê as variáveis de ambiente do processo pai.
 
+
 ### 2.3 Task 3: Environment Variables and execve()
 Compilar o ficheiro "myenv.c", criámos um novo executável "myenv" e executamo-lo.
 <img src="imagens/Captura de ecrã 2023-10-13, às 16.30.49.png">
@@ -51,3 +53,13 @@ Isto acontece pois o "file3" não tem nenhum conteúdo enquanto que o "file4" te
 
 #### Observações
 As variáveis de ambiente do novo programa são determinadas pelo ambiente do processo de chamada. Ao passar NULL como argumento, ele herda um conjunto nulo de variáveis, enquanto que ao passar "environ" permite herdar o conjunto completo de variáveis de ambiente do processo atual.
+
+### 2.4: Environment Variables and system()
+Após criarmos um ficheiro chamado "file4" que contém o código do enunciado,
+<img src="imagens/Captura de ecrã 2023-10-13, às 16.59.33.png">
+conseguimos ver que quando o executamos, vai imprimir todas as variáveis de ambiente.
+No entanto, para conseguirmos tirar uma conclusão, decidimos criar uma nova variável "nova_variável=OLÁ" e ver se esta seria impressa através da função "env" no terminal.
+<img src="imagens/Captura de ecrã 2023-10-13, às 17.24.29.png">
+Algo que também aconteceu quando executamos o programaga task4:
+<img src="imagens/Captura de ecrã 2023-10-13, às 20.29.35.png">
+
