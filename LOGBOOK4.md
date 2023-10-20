@@ -90,7 +90,6 @@ Variáveis de ambiente como LD_LIBRARY_PATH podem ser usadas para manipular o co
 
 
 ### CTF Semana #4 (Linux Environment)
-
 O desafio CTF desta semana tem como objetivo explorar como é que as variáveis de ambiente afetam a execução de programas em Linux.
 
 "Um servidor Linux encontra-se à escuta na porta 4006 do host ctf-fsi.fe.up.pt. Para se ligar a este servidor pode utilizar-se o programa netcat da shell seguinte forma nc ctf-fsi.fe.up.pt 4006." Depois de executar esta instrução do guião do CTF semana #4, tentamos ver os ficheiros que havia no sistema ao qual estavamos conectados.
@@ -115,12 +114,12 @@ Logo após usamos o comando "chmod 777 file.txt" permitindo assim que toda a gen
 
 Após a criação do ficheiro "file.txt" criamos um programa lib.c no qual lemos o conteúdo do ficheiro "flag.txt" e o copiamos e guardamos no nosso ficheiro "file.txt".
 
-<img src="imagens\Screenshot from 2023-10-20 14-18-12.png">
+<img src="imagens/Screenshot from 2023-10-20 14-18-12.png">
 
 Relembramos a Task 7 do SEED LAB deste logbook ao executar dois comandos para compilar e criar uma biblioteca partilhada "lib" a partir do código do ficheiro "lib.c".
 
-<img src="imagens\Screenshot from 2023-10-20 14-18-25.png">
-<img src="imagens\Screenshot from 2023-10-20 14-18-36.png">
+<img src="imagens/Screenshot from 2023-10-20 14-18-25.png">
+<img src="imagens/Screenshot from 2023-10-20 14-18-36.png">
 
 Usamos de novo o comando "chmod 777 lib" dando assim todas as permissões a qualquer usuário de sistema.
 
