@@ -98,4 +98,29 @@ O desafio CTF desta semana tem como objetivo explorar como é que as variáveis 
 <img src="imagens\thumbnail_Captura de ecrã 2023-10-18, às 20.20.55.png">
 
 Deparamo-nos com o primeiro ficheiro "admin_note.txt" que nos deu uma dica de onde poderia estar a resolução do problema: pasta temp.
-No entanto, ainda vimos o conteúdo do ficheiro "main.c" através do comando "cat main.c" ,
+
+Após acedermos ao ficheiro "main.c":
+
+<img src="imagens\Screenshot from 2023-10-20 17-25-20.png">
+
+Percebemos que o programa verifica se o arquivo "/flags/flag.txt" existe. Em caso afirmativo, imprime "File exists!!" e chama a função my_big_congrats.
+Isto levou-nos a querer que a flag que queríamos aceder estaria algures nesta path.
+
+Decidimos colocar uma biblioteca dinâmica no ficheiro "env"
+
+<img src="imagens\Screenshot from 2023-10-20 14-17-58.png">
+
+Depois entramos dentro da pasta "/tmp" através do comando "cd /tmp". Depois de estarmos no diretório vulnerável, criamos um ficheiro .txt chamado "file.txt" com o comando "touch file.txt". 
+Logo após usamos o comando "chmod 777 file.txt" permitindo assim que toda a gente tenha permissões de escrita, leitura e de execução sobre o ficheiro.
+
+Após a criação do ficheiro "file.txt" criamos um programa lib.c no qual lemos o conteúdo do ficheiro "flag.txt" e o copiamos e guardamos no nosso ficheiro "file.txt".
+
+<img src="imagens\Screenshot from 2023-10-20 14-18-12.png">
+
+Com a ajuda da Task 7 executamos os dois comandos para compilar, de forma a tornar o código executável.
+
+<img src="imagens\Screenshot from 2023-10-20 14-18-25.png">
+<img src="imagens\Screenshot from 2023-10-20 14-18-36.png">
+
+Usamos de novo o comando "chmod 777 lib" dando assim todas as permissões a qualquer usuário de sistema. Por fim, usamos o comando "cat file.txt", para podermos ver o cont
+
