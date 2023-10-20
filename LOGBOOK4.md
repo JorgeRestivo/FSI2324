@@ -95,20 +95,20 @@ O desafio CTF desta semana tem como objetivo explorar como é que as variáveis 
 
 "Um servidor Linux encontra-se à escuta na porta 4006 do host ctf-fsi.fe.up.pt. Para se ligar a este servidor pode utilizar-se o programa netcat da shell seguinte forma nc ctf-fsi.fe.up.pt 4006." Depois de executar esta instrução do guião do CTF semana #4, tentamos ver os ficheiros que havia no sistema ao qual estavamos conectados.
 
-<img src="imagens\thumbnail_Captura de ecrã 2023-10-18, às 20.20.55.png">
+<img src="imagens/thumbnail_Captura de ecrã 2023-10-18, às 20.20.55.png">
 
 Deparamo-nos com o primeiro ficheiro "admin_note.txt" que nos deu uma dica de onde poderia estar a resolução do problema: pasta temp.
 
 Após acedermos ao ficheiro "main.c":
 
-<img src="imagens\Screenshot from 2023-10-20 17-25-20.png">
+<img src="imagens/Screenshot from 2023-10-20 17-25-20.png">
 
 Percebemos que o programa verifica se o arquivo "/flags/flag.txt" existe. Em caso afirmativo, imprime "File exists!!" e chama a função my_big_congrats.
 Isto levou-nos a querer que a flag que queríamos aceder estaria algures nesta path.
 
 Decidimos colocar uma biblioteca dinâmica no ficheiro "env"
 
-<img src="imagens\Screenshot from 2023-10-20 14-17-58.png">
+<img src="imagens/Screenshot from 2023-10-20 14-17-58.png">
 
 Depois entramos dentro da pasta "/tmp" através do comando "cd /tmp". Depois de estarmos no diretório vulnerável, criamos um ficheiro .txt chamado "file.txt" com o comando "touch file.txt". 
 Logo após usamos o comando "chmod 777 file.txt" permitindo assim que toda a gente tenha permissões de escrita, leitura e de execução sobre o ficheiro.
