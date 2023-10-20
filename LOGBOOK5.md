@@ -38,6 +38,6 @@ Obtivemos informações cruciais, incluindo os valores dos registradores EBP e o
 
 Com as informações recolhidas, agora somos capazes de criar o ficheiro "badfile" com a ajuda do "exploit.py". No entanto, primeiro precisamos alterar algumas informações nele:
 
-<img src="imagens/Screenshot from 2023-10-20 11-51-27.png">
+<img src="imagens/Captura de ecrã 2023-10-20, às 20.58.29.png">
 <img src="imagens/Screenshot from 2023-10-20 12-56-50.png">
 <img src="imagens/Screenshot from 2023-10-20 12-58-17.png">
