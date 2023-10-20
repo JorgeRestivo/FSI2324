@@ -89,5 +89,13 @@ estas são apenas definidas no terminal do utilizador uma vez que, quando execut
 Variáveis de ambiente como LD_LIBRARY_PATH podem ser usadas para manipular o comportamento de bibliotecas dinâmicas. Num contexto Set-UID, isso pode ser uma séria vulnerabilidade de segurança se permitido. Portanto, ao definir variáveis de ambiente em programas Set-UID, o sistema frequentemente limpa ou redefine variáveis como LD_LIBRARY_PATH para evitar que um usuário mal-intencionado substitua bibliotecas do sistema por outras versões.
 
 
+### CTF Semana #4 (Linux Environment)
 
-### 2.6 The PATH Environment Variable and Set-UID Programs
+O desafio CTF desta semana tem como objetivo explorar como é que as variáveis de ambiente afetam a execução de programas em Linux.
+
+"Um servidor Linux encontra-se à escuta na porta 4006 do host ctf-fsi.fe.up.pt. Para se ligar a este servidor pode utilizar-se o programa netcat da shell seguinte forma nc ctf-fsi.fe.up.pt 4006." Depois de executar esta instrução do guião do CTF semana #4, tentamos ver os ficheiros que havia no sistema ao qual estavamos conectados.
+
+<img src="imagens\thumbnail_Captura de ecrã 2023-10-18, às 20.20.55.png">
+
+Deparamo-nos com o primeiro ficheiro "admin_note.txt" que nos deu uma dica de onde poderia estar a resolução do problema: pasta temp.
+No entanto, ainda vimos o conteúdo do ficheiro "main.c" através do comando "cat main.c" ,
