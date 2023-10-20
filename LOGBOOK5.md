@@ -55,7 +55,7 @@ Recorremos ao ficheiro "exploit.py" mas ainda precisamos de alterar algumas info
 
 <img src="imagens/Captura de ecrã 2023-10-20, às 21.06.23.png">
 
-Executamos exploit.py para criar o "badfile" necessário para usar o exploit.
+Executamos o ficheiro "exploit.py" para criar o "badfile" necessário para usar o exploit.
 Conseguimos completar com sucesso esta tarefa pois obtivemos acesso à root shell.
 
 <img src="imagens/Screenshot from 2023-10-20 12-58-17.png">
