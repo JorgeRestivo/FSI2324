@@ -36,8 +36,22 @@ Obtivemos informações cruciais, incluindo os valores dos registradores EBP e o
 <img src="imagens/Screenshot from 2023-10-20 11-32-15.png">
 <img src="imagens/Screenshot from 2023-10-20 11-32-31.png">
 
-Com as informações recolhidas, agora somos capazes de criar o ficheiro "badfile" com a ajuda do "exploit.py". No entanto, primeiro precisamos alterar algumas informações nele:
+Com as informações recolhidas, agora somos capazes de criar o ficheiro "badfile" com o conteúdo que queremos inserir no buffer.
 
+#### Em que consiste este ataque?
+O ataque consiste em preencher o ficheiro "badfile" com 517 bytes de instruções NOP (sem operação). Em seguida, calcula-se o tamanho do shellcode (27 bytes) e injetamo-lo no ficheiro, 27 bytes antes do final. Utilizando o debugger gdb, descobre-se o endereço de memória do ponteiro da função bof() através do comando "$ebp". Com essa informação, calcula-se o endereço onde o endereço de retorno é armazenado, subtraindo 4 bytes. Manipula-se esse endereço para apontar para um local no código antes da injeção do shellcode. As instruções NOP permitem que a CPU avance até encontrar e executar o shellcode malicioso.
+
+
+Recorremos ao ficheiro "exploit.py" mas ainda precisamos de alterar algumas informações:
+
+1º- Na variável shellcode inserimos o shellcode em 32-bits que executa uma shell:
 <img src="imagens/Captura de ecrã 2023-10-20, às 20.58.29.png">
-<img src="imagens/Screenshot from 2023-10-20 12-56-50.png">
+
+2º- O buffer tem um tamanho de 517 bytes e o shellcode tem um tamanho de 27 bytes. Como vamos colocar o nosso shellcode no final do buffer, então 517 - 27 = 490.
+
+3º- Este é o endereço para o qual queremos que o nosso shellcode aponte. Sabemos que o buffer começa em 0xFFFFCA7C (obtivemos esta informação através do debbuger gdb e do comando "&buffer") e tem um tamanho de 517 bytes. Colocamos o nosso shellcode 27 bytes antes do final, ou seja, em 0xFFFFCA7C + 1EA (490 em hexadecimal) e assim obtivemos o endereço: 0xFFFFCC66.
+
+4º- Sabemos que o retorno que queremos modificar está após o ebp, e também sabemos que o ebp tem um tamanho de 4 bytes. Utilizando os 2 endereços obtidos no debug, calculou-se a localização do endereço de retorno relativamente ao inicio do array (offset): 0xFFFFCAE8 - 0xFFFFCA7C + 4 (tamanho do ebp) = 112.
+
+<img src="imagens/Captura de ecrã 2023-10-20, às 21.06.23.png">
 <img src="imagens/Screenshot from 2023-10-20 12-58-17.png">
