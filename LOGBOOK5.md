@@ -26,10 +26,18 @@ Para compilar, desativamos o StackGuard e as proteções de pilha não executáv
 
 ### 5 Task 3: Launching Attack on 32-bit Program (Level 1)
 
+Nos passos dados, identificamos e exploramos uma vulnerabilidade de buffer overflow em um programa. Utilizamos o GDB para estabelecer um ponto de interrupção na função bof() e observamos o comportamento dos registos durante a execução do programa.
+
 <img src="imagens/Screenshot from 2023-10-20 11-31-20.png">
+
+Obtivemos informações cruciais, incluindo os valores dos registradores EBP e o endereço do buffer, essenciais para criar um payload de exploração bem-sucedido. Preparamos um arquivo chamado badfile para fornecer entrada ao programa durante a execução. 
+
 <img src="imagens/Screenshot from 2023-10-20 11-31-54.png">
 <img src="imagens/Screenshot from 2023-10-20 11-32-15.png">
 <img src="imagens/Screenshot from 2023-10-20 11-32-31.png">
+
+Com as informações recolhidas, agora somos capazes de criar o ficheiro "badfile" com a ajuda do "exploit.py". No entanto, primeiro precisamos alterar algumas informações nele:
+
 <img src="imagens/Screenshot from 2023-10-20 11-51-27.png">
 <img src="imagens/Screenshot from 2023-10-20 12-56-50.png">
 <img src="imagens/Screenshot from 2023-10-20 12-58-17.png">
