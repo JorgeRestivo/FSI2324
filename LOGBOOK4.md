@@ -117,10 +117,11 @@ Após a criação do ficheiro "file.txt" criamos um programa lib.c no qual lemos
 
 <img src="imagens\Screenshot from 2023-10-20 14-18-12.png">
 
-Com a ajuda da Task 7 executamos os dois comandos para compilar, de forma a tornar o código executável.
+Relembramos a Task 7 do SEED LAB deste logbook ao executar dois comandos para compilar e criar uma biblioteca partilhada "lib" a partir do código do ficheiro "lib.c".
 
 <img src="imagens\Screenshot from 2023-10-20 14-18-25.png">
 <img src="imagens\Screenshot from 2023-10-20 14-18-36.png">
 
-Usamos de novo o comando "chmod 777 lib" dando assim todas as permissões a qualquer usuário de sistema. Por fim, usamos o comando "cat file.txt", para podermos ver o cont
+Usamos de novo o comando "chmod 777 lib" dando assim todas as permissões a qualquer usuário de sistema.
 
+Por fim, executamos o comando "cat file.txt" de forma a obtermos o conteúdo do ficheiro "file.txt", chegando assim à flag.
