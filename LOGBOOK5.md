@@ -24,5 +24,12 @@ O programa "stack.c" tem uma vulnerabilidade de buffer overflow. Primeiro, lê u
 Para compilar, desativamos o StackGuard e as proteções de pilha não executável. Após a compilação, é necessário transformar o programa num programa Set-UID de propriedade do root.
 
 
+### 5 Task 3: Launching Attack on 32-bit Program (Level 1)
 
-
+<img src="imagens/Screenshot from 2023-10-20 11-31-20.png">
+<img src="imagens/Screenshot from 2023-10-20 11-31-54.png">
+<img src="imagens/Screenshot from 2023-10-20 11-32-15.png">
+<img src="imagens/Screenshot from 2023-10-20 11-32-31.png">
+<img src="imagens/Screenshot from 2023-10-20 11-51-27.png">
+<img src="imagens/Screenshot from 2023-10-20 12-56-50.png">
+<img src="imagens/Screenshot from 2023-10-20 12-58-17.png">
