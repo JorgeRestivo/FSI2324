@@ -54,4 +54,8 @@ Recorremos ao ficheiro "exploit.py" mas ainda precisamos de alterar algumas info
 4º- Sabemos que o retorno que queremos modificar está após o ebp, e também sabemos que o ebp tem um tamanho de 4 bytes. Utilizando os 2 endereços obtidos no debug, calculou-se a localização do endereço de retorno relativamente ao inicio do array (offset): 0xFFFFCAE8 - 0xFFFFCA7C + 4 (tamanho do ebp) = 112.
 
 <img src="imagens/Captura de ecrã 2023-10-20, às 21.06.23.png">
+
+Executamos exploit.py para criar o "badfile" necessário para usar o exploit.
+Conseguimos completar com sucesso esta tarefa pois obtivemos acesso à root shell.
+
 <img src="imagens/Screenshot from 2023-10-20 12-58-17.png">
