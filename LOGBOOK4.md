@@ -90,37 +90,37 @@ Variáveis de ambiente como LD_LIBRARY_PATH podem ser usadas para manipular o co
 
 
 ### CTF Semana #4 (Linux Environment)
-
 O desafio CTF desta semana tem como objetivo explorar como é que as variáveis de ambiente afetam a execução de programas em Linux.
 
 "Um servidor Linux encontra-se à escuta na porta 4006 do host ctf-fsi.fe.up.pt. Para se ligar a este servidor pode utilizar-se o programa netcat da shell seguinte forma nc ctf-fsi.fe.up.pt 4006." Depois de executar esta instrução do guião do CTF semana #4, tentamos ver os ficheiros que havia no sistema ao qual estavamos conectados.
 
-<img src="imagens\thumbnail_Captura de ecrã 2023-10-18, às 20.20.55.png">
+<img src="imagens/thumbnail_Captura de ecrã 2023-10-18, às 20.20.55.png">
 
 Deparamo-nos com o primeiro ficheiro "admin_note.txt" que nos deu uma dica de onde poderia estar a resolução do problema: pasta temp.
 
 Após acedermos ao ficheiro "main.c":
 
-<img src="imagens\Screenshot from 2023-10-20 17-25-20.png">
+<img src="imagens/Screenshot from 2023-10-20 17-25-20.png">
 
 Percebemos que o programa verifica se o arquivo "/flags/flag.txt" existe. Em caso afirmativo, imprime "File exists!!" e chama a função my_big_congrats.
 Isto levou-nos a querer que a flag que queríamos aceder estaria algures nesta path.
 
 Decidimos colocar uma biblioteca dinâmica no ficheiro "env"
 
-<img src="imagens\Screenshot from 2023-10-20 14-17-58.png">
+<img src="imagens/Screenshot from 2023-10-20 14-17-58.png">
 
 Depois entramos dentro da pasta "/tmp" através do comando "cd /tmp". Depois de estarmos no diretório vulnerável, criamos um ficheiro .txt chamado "file.txt" com o comando "touch file.txt". 
 Logo após usamos o comando "chmod 777 file.txt" permitindo assim que toda a gente tenha permissões de escrita, leitura e de execução sobre o ficheiro.
 
 Após a criação do ficheiro "file.txt" criamos um programa lib.c no qual lemos o conteúdo do ficheiro "flag.txt" e o copiamos e guardamos no nosso ficheiro "file.txt".
 
-<img src="imagens\Screenshot from 2023-10-20 14-18-12.png">
+<img src="imagens/Screenshot from 2023-10-20 14-18-12.png">
 
-Com a ajuda da Task 7 executamos os dois comandos para compilar, de forma a tornar o código executável.
+Relembramos a Task 7 do SEED LAB deste logbook ao executar dois comandos para compilar e criar uma biblioteca partilhada "lib" a partir do código do ficheiro "lib.c".
 
-<img src="imagens\Screenshot from 2023-10-20 14-18-25.png">
-<img src="imagens\Screenshot from 2023-10-20 14-18-36.png">
+<img src="imagens/Screenshot from 2023-10-20 14-18-25.png">
+<img src="imagens/Screenshot from 2023-10-20 14-18-36.png">
 
-Usamos de novo o comando "chmod 777 lib" dando assim todas as permissões a qualquer usuário de sistema. Por fim, usamos o comando "cat file.txt", para podermos ver o cont
+Usamos de novo o comando "chmod 777 lib" dando assim todas as permissões a qualquer usuário de sistema.
 
+Por fim, executamos o comando "cat file.txt" de forma a obtermos o conteúdo do ficheiro "file.txt", chegando assim à flag.
