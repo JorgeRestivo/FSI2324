@@ -21,3 +21,10 @@ A tarefa consistia em acedermos aos dados do utilizador "Alice" e para isso reco
 
 
 ### 3.2 Task 2: SQL Injection Attack on SELECT Statement
+### Task 2.1: SQL Injection Attack from webpage.
+A tarefa é efetuar o login na aplicação  como administrador a partir da página de início de sessão, de modo a aceder às informações de todos os funcionários.
+Sabemos que o nome da conta é "admin" mas não sabemos a password.
+
+Para isso, colocámos "admin#" como username. O '#' após o "admin" faz com que o resto do código SQL esteja comentado, deixando de ser verificada a password na query.
+
+<img src = "imagens/Screenshot from 2023-11-17 11-01-31.png">
