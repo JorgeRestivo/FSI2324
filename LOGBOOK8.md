@@ -87,3 +87,6 @@ Para isso utilizamos o comando: "Boby',Salary=1 WHERE Name='BOBY' #".
 E verificamos a partir da shell que o pedido foi bem sucedido:
 
 <img src="imagens/Screenshot from 2023-11-17 11-54-49.png">
+
+
+#### Task 3.3: Modify other people’ password.
