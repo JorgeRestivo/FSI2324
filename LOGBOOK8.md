@@ -75,3 +75,15 @@ Assim, mantivemos o nickname e alteramos o salário para 77777. Poderíamos apen
 Verificando-se assim o resultado:
 
 <img src="imagens/Screenshot from 2023-11-17 11-51-16.png">
+
+
+#### Task 3.2: Modify other people’ salary.
+
+Para modificar o salário do Boby, usamos a caixa de texto NickName, outra vez no "Edit Profile" do usuário "Alice.
+Para isso utilizamos o comando: "Boby',Salary=1 WHERE Name='BOBY' #".
+
+<img src="imagens/Screenshot from 2023-11-17 11-53-26.png">
+
+E verificamos a partir da shell que o pedido foi bem sucedido:
+
+<img src="imagens/Screenshot from 2023-11-17 11-54-49.png">
