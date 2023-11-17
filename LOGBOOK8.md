@@ -33,14 +33,27 @@ O resultado foi:
 
 <img src= "imagens/Screenshot from 2023-11-17 11-01-38.png">
 
+
+
 ### Task 2.2: SQL Injection Attack from command line.
 Esta tarefa consiste em repetir a Tarefa 2.1, mas sem usar a página web.
 Utilizamos o comando curl para enviar um pedido HTTP à aplicação web e efetuar o login a partir da linha de comandos. Para o nome de utilizador, precisamos passar admin'# que são caracteres especiais e, por isso, precisam de ser codificados.
 Utilizamos as seguintes codificações: Aspas Simples (') %27 e Sinal de Hash (#) %23.
 
 <img src="imagens/Screenshot from 2023-11-17 11-09-25.png">
-
+<img src="imagens/Screenshot from 2023-11-17 11-09-51.png">
 
 Ao criarmos um ficheiro HTML com o código fornecido e abrindo num navegar, obtivemos:
 
 <img src="imagens/Captura de ecrã 2023-11-17, às 23.27.40.png">
+
+
+
+### Task 2.3: Append a new SQL statement.
+A tentativa atual é explorar a vulnerabilidade da injeção SQL na página de login para modificar a base de dados. A estratégia é converter uma instrução SQL em duas, usando o ponto e vírgula (;) como separador.
+
+Isso permitiria incluir uma segunda instrução, como uma atualização (update) ou eliminação (delete). Contudo, há uma contramedida para evitar a execução de duas instruções SQL nesse ataque.
+
+Para isso, tentamos utilizar o comando: "admin';UPDATE credential SET Name = 'Antonio' WHERE Name='Alice'; #" e obtivemos o erro em questão.
+
+<img src="imagens/Screenshot from 2023-11-17 11-48-04.png">
