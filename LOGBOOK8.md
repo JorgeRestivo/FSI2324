@@ -21,7 +21,7 @@ A tarefa consistia em acedermos aos dados do utilizador "Alice" e para isso reco
 
 
 ### 3.2 Task 2: SQL Injection Attack on SELECT Statement
-### Task 2.1: SQL Injection Attack from webpage.
+#### Task 2.1: SQL Injection Attack from webpage.
 A tarefa é efetuar o login na aplicação  como administrador a partir da página de início de sessão, de modo a aceder às informações de todos os funcionários.
 Sabemos que o nome da conta é "admin" mas não sabemos a password.
 
@@ -35,7 +35,7 @@ O resultado foi:
 
 
 
-### Task 2.2: SQL Injection Attack from command line.
+#### Task 2.2: SQL Injection Attack from command line.
 Esta tarefa consiste em repetir a Tarefa 2.1, mas sem usar a página web.
 Utilizamos o comando curl para enviar um pedido HTTP à aplicação web e efetuar o login a partir da linha de comandos. Para o nome de utilizador, precisamos passar admin'# que são caracteres especiais e, por isso, precisam de ser codificados.
 Utilizamos as seguintes codificações: Aspas Simples (') %27 e Sinal de Hash (#) %23.
@@ -49,7 +49,7 @@ Ao criarmos um ficheiro HTML com o código fornecido e abrindo num navegar, obti
 
 
 
-### Task 2.3: Append a new SQL statement.
+#### Task 2.3: Append a new SQL statement.
 A tentativa atual é explorar a vulnerabilidade da injeção SQL na página de login para modificar a base de dados. A estratégia é converter uma instrução SQL em duas, usando o ponto e vírgula (;) como separador.
 
 Isso permitiria incluir uma segunda instrução, como uma atualização (update) ou eliminação (delete). Contudo, há uma contramedida para evitar a execução de duas instruções SQL nesse ataque.
@@ -57,3 +57,21 @@ Isso permitiria incluir uma segunda instrução, como uma atualização (update)
 Para isso, tentamos utilizar o comando: "admin';UPDATE credential SET Name = 'Antonio' WHERE Name='Alice'; #" e obtivemos o erro em questão.
 
 <img src="imagens/Screenshot from 2023-11-17 11-48-04.png">
+
+
+### 3.3 Task 3: SQL Injection Attack on UPDATE Statement
+#### Task 3.1: Modify your own salary.
+
+Nesta tarefa, temos que modificar o salário da Alice e, para isso, iniciamos sessão como "Alice'#", e na página "Edit Profile" é onde vamos recorrer ao ataque.
+
+<img src="imagens/Screenshot from 2023-11-17 11-49-39.png">
+
+Editamos o nickname da Alice com o comando: "alice', salário = '77777".
+
+Assim, mantivemos o nickname e alteramos o salário para 77777. Poderíamos apenas fazer: ', salário = '77777 onde quiséssemos.
+
+<img src="imagens/Screenshot from 2023-11-17 11-51-29.png">
+
+Verificando-se assim o resultado:
+
+<img src="imagens/Screenshot from 2023-11-17 11-51-16.png">
