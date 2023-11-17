@@ -28,3 +28,19 @@ Sabemos que o nome da conta é "admin" mas não sabemos a password.
 Para isso, colocámos "admin#" como username. O '#' após o "admin" faz com que o resto do código SQL esteja comentado, deixando de ser verificada a password na query.
 
 <img src = "imagens/Screenshot from 2023-11-17 11-01-31.png">
+
+O resultado foi:
+
+<img src= "imagens/Screenshot from 2023-11-17 11-01-38.png">
+
+### Task 2.2: SQL Injection Attack from command line.
+Esta tarefa consiste em repetir a Tarefa 2.1, mas sem usar a página web.
+Utilizamos o comando curl para enviar um pedido HTTP à aplicação web e efetuar o login a partir da linha de comandos. Para o nome de utilizador, precisamos passar admin'# que são caracteres especiais e, por isso, precisam de ser codificados.
+Utilizamos as seguintes codificações: Aspas Simples (') %27 e Sinal de Hash (#) %23.
+
+<img src="imagens/Screenshot from 2023-11-17 11-09-25.png">
+
+
+Ao criarmos um ficheiro HTML com o código fornecido e abrindo num navegar, obtivemos:
+
+<img src="imagens/Captura de ecrã 2023-11-17, às 23.27.40.png">
