@@ -91,7 +91,14 @@ E verificamos a partir da shell que o pedido foi bem sucedido:
 
 #### Task 3.3: Modify other people’ password.
 
+Sabendo que a password foi hash usando SHA1, obtivemos a senha hash da tabela de credenciais, usando a linha do Bobby.
+Utilizamos o comando "Boby',password='522b276a356bdf39013dfabea2cd43e141ecc9e8' where name='Boby'#"
 
+<img src="imagens/Screenshot from 2023-11-17 12-06-18.png">
+
+<img src="imagens/Screenshot from 2023-11-17 12-06-59.png">
+
+Como podemos ver, foi alterada com sucesso.
 
 
 
