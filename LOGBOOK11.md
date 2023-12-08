@@ -102,5 +102,6 @@ Descomentar esta linha permitirá que o comando "openssl ca" copie a extensão d
 
 Depois de assinar o certificado, o seguinte comando é utilizado para imprimir o conteúdo decodificado do certificado e verificar se os nomes alternativos estão incluídos:
 
+<img src = "imagens/Captura de ecrã 2023-12-08, às 20.51.10.png">
 
-Este comando usa o OpenSSL para mostrar os detalhes do certificado em formato de texto. O -in server.crt especifica o ficheiro do certificado de entrada, e -text -noout instrui o OpenSSL a exibir o conteúdo em texto sem mostrar a versão codificada.
+<img src = "imagens/Captura de ecrã 2023-12-08, às 20.51.17.png">
