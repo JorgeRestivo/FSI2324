@@ -21,7 +21,7 @@ Para verificarmos que a encriptação foi bem sucedida, utilizamos o comnado inv
 
 <img src="imagens/imag2.png">
 
-## Task 3: Secret-Key Encryption Lab
+### Task 3: Secret-Key Encryption Lab
 
 Como pedido, começamos por encriptar a imagem inicial que nos é dada, criando assim uma cópia encriptada da mesma.
 
@@ -49,7 +49,7 @@ Imagem Encriptada:
 
 <img src="imagens/Screenshot from 2023-12-08 12-02-50.png">
 
-Como na primeira imagem podemos observar que o conteúdo na imagem encriptada não revela qualquer tipo de informação ou aspeto da imagem inicial.
+Como na primeira imagem, podemos observar que o conteúdo na imagem encriptada não revela qualquer tipo de informação ou aspeto da imagem inicial.
 
 
 
