@@ -106,6 +106,29 @@ Depois de assinar o certificado, o seguinte comando é utilizado para imprimir o
 
 <img src = "imagens/Captura de ecrã 2023-12-08, às 20.51.17.png">
 
+
+### 3.4 Task 4: Deploying Certificate in an Apache-Based HTTPS Website
+
+O exemplo configura um site HTTPS em https://www.bank32.com (porta 443) usando o Apache. Define o nome do servidor (ServerName), o diretório dos arquivos do site (DocumentRoot), e permite diferentes nomes de servidor usando entradas ServerAlias. O certificado do servidor e a chave privada são copiados para o container na pasta /certs durante a construção, e o módulo SSL do Apache é habilitado, permitindo que o site funcione com segurança usando HTTPS.
+
+<img src = "imagens/FILE.png">
+
+Lançamos o website através destes comandos: 
+<img src = "imagens/dockps.png">
+
+E ao inserir no navegador "www.bank32.com" reparámos que este website não era uma ligação segura.
+
+<img src = "imagens/Captura de ecrã 2023-12-08, às 23.30.35.png">
+
+Para isso adicionamos o ficheiro "ca.crt" em Preferences -> Private & Security -> View Certificate.
+
+<img src = "imagens/Captura de ecrã 2023-12-08, às 23.48.27.png">
+
+<img src= "imagens/certifiacte_manager.png">
+
+
+Passando assim a conecção a ser segura.
+
 ## 3.5 Task 5:  Launching a Man-In-The-Middle Attack
 
 Para provar a eficiência da infraestrutura PKI, vamos lançar um ataque Men in the Middle. Para isso começamos por mudificar o ficheiro bank32_apache_ssl.conf, depois mudificamos a entrada no ficheiro /etc/hosts para o 10.9.0.80 para o www.exemplo.com.
@@ -123,3 +146,4 @@ Ao dar rebuild ao servidor e ir ao site www.example.com verificamos que o browse
 A razão para isso é porque estamos a tentar usar o certificado que geramos para “www.bank32.com” com “www.exemplo.com”. O Firefox consegue reconhecer que algo não está certo e por isso mostra este aviso.
 
 Isso mostra que um ataque MITM não foi bem-sucedido porque o navegador conseguiu detectá-lo.
+Verifica-se assim que todos os nomes que inserimos na tarefa 2 são impressos aqui também.
