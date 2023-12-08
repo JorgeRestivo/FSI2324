@@ -23,5 +23,36 @@ Para verificarmos que a encriptação foi bem sucedida, utilizamos o comnado inv
 
 ## Task 3: Secret-Key Encryption Lab
 
+Como pedido, começamos por encriptar a imagem inicial que nos é dada, criando assim uma cópia encriptada da mesma.
+
+<img src="imagens/Screenshot from 2023-12-08 11-39-57.png">
+
+Utilizamos os comandos que nos foram dados para podermos tornar a imagem encriptada num ficheiro .bmp legítimo.
+
+Como podemos ver a imagem inicial, foi encriptada e qualquer pessoa que tenha acesso a ela, não pode ver o conteúdo que ela tinha anteriormente.
+
+Imagem Inicial:
+
+<img src="imagens/Screenshot from 2023-12-08 12-06-31.png">
+
+Imagem Encriptada:
+
+<img src="imagens/Screenshot from 2023-12-08 11-40-44.png">
+
+De seguida utilizamos outra imagem .bmp a nossa escolha para ver se o efeito seria o mesmo. Utilizamos o mesmo conjunto de comandos e este foi o resultado.
+
+Imagem Inicial:
+
+<img src="imagens/Screenshot from 2023-12-08 11-58-35.png">
+
+Imagem Encriptada:
+
+<img src="imagens/Screenshot from 2023-12-08 12-02-50.png">
+
+Como na primeira imagem podemos observar que o conteúdo na imagem encriptada não revela qualquer tipo de informação ou aspeto da imagem inicial.
+
+
+
+
 
 
