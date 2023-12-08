@@ -126,5 +126,8 @@ Para isso adicionamos o ficheiro "ca.crt" em Preferences -> Private & Security -
 
 <img src = "imagens/Captura de ecrã 2023-12-08, às 23.48.27.png">
 
+<img src= "imagens/certifiacte_manager.png">
+
+
 Passando assim a conecção a ser segura.
 
