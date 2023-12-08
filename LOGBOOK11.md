@@ -72,3 +72,15 @@ O "p" seria o "prime1":
 O "q" seria o "prime2":
 
 <img src = "imagens/prime2.png">
+
+### 3.2 Task 2: Generating a Certificate Request for Your Web Server
+
+Este comando é utilizado para gerar um pedido de assinatura de certificado (CSR) usando uma nova chave de servidor.
+A flag -addext com a extensão SAN é crucial para incluir nomes de domínio adicionais no certificado. Isso ajuda a conectar diferentes URLs que apontam para o mesmo servidor web ao mesmo certificado.
+
+<img src = "imagens/pedidoCSR.png">
+
+Após gerar o CSR, o seguinte comando é utilizado para exibir o conteúdo do CSR em formato legível:
+
+<img src = "imagens/CSRoutput.png">
+
