@@ -118,7 +118,7 @@ O exemplo configura um site HTTPS em https://www.bank32.com (porta 443) usando o
 Lançamos o website através destes comandos: 
 <img src = "imagens/dockps.png">
 
-E ao pesquisar no navegador "www.bank32.com" reparámos que este website não era uma ligação segura.
+E ao inserir no navegador "www.bank32.com" reparámos que este website não era uma ligação segura.
 
 <img src = "imagens/Captura de ecrã 2023-12-08, às 23.30.35.png">
 
