@@ -105,3 +105,21 @@ Depois de assinar o certificado, o seguinte comando é utilizado para imprimir o
 <img src = "imagens/Captura de ecrã 2023-12-08, às 20.51.10.png">
 
 <img src = "imagens/Captura de ecrã 2023-12-08, às 20.51.17.png">
+
+## 3.5 Task 5:  Launching a Man-In-The-Middle Attack
+
+Para provar a eficiência da infraestrutura PKI, vamos lançar um ataque Men in the Middle. Para isso começamos por mudificar o ficheiro bank32_apache_ssl.conf, depois mudificamos a entrada no ficheiro /etc/hosts para o 10.9.0.80 para o www.exemplo.com.
+
+<img src="imagens/Screenshot from 2023-12-08 18-26-05.png">
+
+<img src="imagens/Screenshot from 2023-12-08 18-25-21.png">
+
+Ao dar rebuild ao servidor e ir ao site www.example.com verificamos que o browser alerta para um potencial risco:
+
+<img src="imagens/Screenshot from 2023-12-08 18-39-11.png">
+
+<img src="imagens/Screenshot from 2023-12-08 18-40-04.png">
+
+A razão para isso é porque estamos a tentar usar o certificado que geramos para “www.bank32.com” com “www.exemplo.com”. O Firefox consegue reconhecer que algo não está certo e por isso mostra este aviso.
+
+Isso mostra que um ataque MITM não foi bem-sucedido porque o navegador conseguiu detectá-lo.
