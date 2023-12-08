@@ -122,4 +122,9 @@ E ao inserir no navegador "www.bank32.com" reparámos que este website não era 
 
 <img src = "imagens/Captura de ecrã 2023-12-08, às 23.30.35.png">
 
-Para isso acedemos
+Para isso adicionamos o ficheiro "ca.crt" em Preferences -> Private & Security -> View Certificate.
+
+<img src = "imagens/Captura de ecrã 2023-12-08, às 23.48.27.png">
+
+Passando assim a conecção a ser segura.
+
