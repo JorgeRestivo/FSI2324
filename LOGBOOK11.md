@@ -45,3 +45,30 @@ usa o OpenSSL para decodificar e exibir o conteúdo da chave RSA em formato de t
 
 <img src = "imagens/ca.key_output.png">
 
+#### Questões
+#### 1 - Que parte do certificado indica que este é um certificado de CA?
+
+Através da flag "CA".
+<img src = "imagens/CAcertificate.png">
+
+
+#### 2 - Que parte do certificado indica que este é um certificado autoassinado?
+
+É autoassinado uma vez que o campo "issuer" e "subject" indicam os mesmos valores.
+
+<img src = "imagens/autosigned.png">
+
+
+#### 3 - No algoritmo RSA, temos um expoente público e, um expoente privado d, um módulo n e dois números secretos p e q, tais que n = pq. Identifique os valores desses elementos no teu certificado e arquivos de chave.
+
+O "n" seria o "modulus":
+
+<img src = "imagens/modulus.png">
+
+O "p" seria o "prime1":
+
+<img src = "imagens/prime1.png">
+
+O "q" seria o "prime2":
+
+<img src = "imagens/prime2.png">
