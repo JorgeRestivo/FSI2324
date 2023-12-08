@@ -105,3 +105,21 @@ Depois de assinar o certificado, o seguinte comando é utilizado para imprimir o
 <img src = "imagens/Captura de ecrã 2023-12-08, às 20.51.10.png">
 
 <img src = "imagens/Captura de ecrã 2023-12-08, às 20.51.17.png">
+
+Verifica-se assim que todos os nomes que inserimos na tarefa 2 são impressos aqui também.
+
+
+### 3.4 Task 4: Deploying Certificate in an Apache-Based HTTPS Website
+
+O exemplo configura um site HTTPS em https://www.bank32.com (porta 443) usando o Apache. Define o nome do servidor (ServerName), o diretório dos arquivos do site (DocumentRoot), e permite diferentes nomes de servidor usando entradas ServerAlias. O certificado do servidor e a chave privada são copiados para o container na pasta /certs durante a construção, e o módulo SSL do Apache é habilitado, permitindo que o site funcione com segurança usando HTTPS.
+
+<img src = "imagens/FILE.png">
+
+Lançamos o website através destes comandos: 
+<img src = "imagens/dockps.png">
+
+E ao pesquisar no navegador "www.bank32.com" reparámos que este website não era uma ligação segura.
+
+<img src = "imagens/Captura de ecrã 2023-12-08, às 23.30.35.png">
+
+Para isso acedemos
