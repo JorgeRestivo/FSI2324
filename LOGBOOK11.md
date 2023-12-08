@@ -73,6 +73,7 @@ O "q" seria o "prime2":
 
 <img src = "imagens/prime2.png">
 
+
 ### 3.2 Task 2: Generating a Certificate Request for Your Web Server
 
 Este comando é utilizado para gerar um pedido de assinatura de certificado (CSR) usando uma nova chave de servidor.
@@ -84,3 +85,22 @@ Após gerar o CSR, o seguinte comando é utilizado para exibir o conteúdo do CS
 
 <img src = "imagens/CSRoutput.png">
 
+
+### 3.3 Task 3: Generating a Certificate for your server
+
+<img src = "imagens/Captura de ecrã 2023-12-08, às 20.43.39.png">
+
+Este comando é utilizado para transformar o pedido de assinatura de certificado num certificado X509, utilizando a assinatura da CA e converte "server.csr" num certificado autoassinado, "server.crt".
+
+<img src = "imagens/Captura de ecrã 2023-12-08, às 20.45.49.png">
+
+Antes de assinar o certificado, é mencionado que a extensão de campo não é copiada por padrão do pedido para o certificado final. Para ativar essa opção, é sugerido descomentar a linha no ficheiro de configuração:
+
+<img src = "imagens/copy_extensions.png">
+
+Descomentar esta linha permitirá que o comando "openssl ca" copie a extensão do pedido para o certificado final.
+
+Depois de assinar o certificado, o seguinte comando é utilizado para imprimir o conteúdo decodificado do certificado e verificar se os nomes alternativos estão incluídos:
+
+
+Este comando usa o OpenSSL para mostrar os detalhes do certificado em formato de texto. O -in server.crt especifica o ficheiro do certificado de entrada, e -text -noout instrui o OpenSSL a exibir o conteúdo em texto sem mostrar a versão codificada.
